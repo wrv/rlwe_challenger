@@ -12,11 +12,16 @@ try:
 except IOError:
 	print "could not open file"
 
+print "First challenge instance in toy: "
 aVals =  challengeInstance.samples[0].a
 bVals = challengeInstance.samples[0].b
 m =  aVals.m
 q = aVals.q
 
+print "\tm value: " + str(m)
+print "\tq value: " + str(q)
+
+print "\tSamples (a, b=a*s+e): " + str(len(aVals.xs)) + " samples"
 if len(aVals.xs) == len(bVals.xs):
 	for j in range(len(aVals.xs)):
-		print (aVals.xs[j], bVals.xs[j])
+		print "\t(" + str(aVals.xs[j]) + "," + str(bVals.xs[j]) + ")"
